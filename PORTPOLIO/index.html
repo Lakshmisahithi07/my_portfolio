@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/90f149c7b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/image6.png" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#CERTIFICATIONS">CERTIFICATIONS</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>HI, I'm Lakshmi Sahithi <span>Akkireddi</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/image2.jpg" alt="Profile Image">
+                </div>
+                <div class="about-col-2">
+                    <h1>ABOUT <span>ME</span></h1>
+                    <p>Enthusiastic Computer Science student with skills in web development and leadership, seeking to contribute to innovative projects.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('EDUCATION')">EDUCATION</p>
+                        <p class="tab-links" onclick="opentab('SKILLS')">SKILLS</p>
+                        <p class="tab-links" onclick="opentab('HOBBIES')">HOBBIES</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="EDUCATION">
+                        <ul>
+                            <li><span>SSC : 2019</span><br>BHASHYAM SCHOOL</li>
+                            <li><span>INTERMEDIATE : 2019-2021</span><br>MODERN JUNIOR COLLEGE</li>
+                            <li><span>B.TECH : 2021-2025</span><br>ADITYA UNIVERSITY</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="SKILLS">
+                        <ul>
+                            <li>Frontend Developer</li>
+                            <li><span>Programming Languages</span><br>HTML, CSS, Python</li>
+                            <li><span>Special Skills</span><br>Leadership, Communication, Creativity, Team Management</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="HOBBIES">
+                        <ul>
+                            <li>Social Service Activities</li>
+                            <li>Painting</li>
+                            <li>Cooking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="CERTIFICATIONS">
+        <h1>MY <span>CERTIFICATIONS</span></h1>
+    </div>
+    <section id="introblocks">
+        <ul class="nospace group btmspace-80">
+            <li class="one_third">
+                <figure><a class="imgover" href="#"><img src="image/image7.png" alt=""></a>
+                    <figcaption><h2 class="heading">Database Foundations - ORACLE ACADEMY</h2></figcaption>
+                </figure>
+            </li>
+            <li class="one_third first">
+                <figure><a class="imgover" href="#"><img src="image/image5.jpg.png" alt=""></a>
+                    <figcaption><h2 class="heading">AWS Academy Cloud Foundations</h2></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure><a class="imgover" href="#"><img src="image/image8.png" alt=""></a>
+                    <figcaption><h6 class="heading">Basics of Python - Infosys Springboard</h6></figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <div id="CONTACT">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact <span>Me</span></h1>
+                    <p><i class="fa-solid fa-envelope"></i> sahithia55@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7989589869</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/lakshmi-sahithi-a-239524260/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sahithiakkireddi"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/SahithiA7"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/your-unique-id" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © Sahithi <i class="fa-solid fa-heart" style="color: #fe0101;"></i></p>
+    </div>
+
+    <script>
+        function opentab(tabname){
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            for(let tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(let tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
+
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
